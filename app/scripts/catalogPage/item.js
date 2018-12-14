@@ -34,7 +34,6 @@ module.exports = React.createClass({
           {this.props.significance}
         </h8>
         <span dangerouslySetInnerHTML={this.rawMarkup()} />
-        <Link to={'/' + this.props.id}>Edit</Link>
       </div>
     );
   }

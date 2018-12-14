@@ -1,9 +1,9 @@
 import React from 'react';
+import Menu from '../menu/menu.js';
 import $ from 'jquery';
 
 import CatalogList from './catalogList';
-import CatalogForm from './catalogForm';
-import { API_URL, POLL_INTERVAL } from './global';
+import { API_URL, POLL_INTERVAL } from '../global';
 
 module.exports = React.createClass({
     getInitialState: function() {
@@ -58,11 +58,15 @@ module.exports = React.createClass({
     },
     render: function() {
         return (
+          <div>
+          <Menu />
+            <div className="page">
             <div className="catalogBox">
-                <h1>Museum Catalog</h1>
+                <h1>Museum Catalog:</h1>
                 <CatalogList data={this.state.data} />
-                <CatalogForm onObjectSubmit={this.handleObjectSubmit} />
             </div>
+            </div>
+          </div>
         );
     }
 });

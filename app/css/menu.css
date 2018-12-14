@@ -1,0 +1,44 @@
+#menu {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  border-top: 5px solid #071026;
+  border-bottom: 5px solid #071026;
+  padding-top: 20px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  height: 50px;
+}
+
+#logo {
+  flex: 1;
+  padding-left: 30px;
+}
+
+#logo img {
+  width: 150px;
+  height: 90px;
+}
+
+#menu-items {
+  flex: 5;
+  padding-right: 100px;
+  margin-top: -10px;
+}
+
+#menu-items ul {
+  display: flex;
+  justify-content: space-between;
+}
+
+#menu-items ul li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+#menu-items ul li a {
+  color: #071026;
+  font-size: 30px;
+  font-family: 'Doppio One', sans-serif;
+}
