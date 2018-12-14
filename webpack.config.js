@@ -12,11 +12,13 @@ module.exports = {
     module: {
         loaders: [
             { test: /\.jsx?$/, exclude: /node_modules/, loader: "babel-loader" },
-            { test: /\.css$/,  loader: 'style!css?modules!postcss' }
+            { test: /\.css$/, loader: "style-loader!css-loader" },
+            { test: /\.(png|jpg)$/, loader: 'file-loader?name=images/[name].[ext]' },
+            { test: /\.html$/, exclude: /node_modules/, loader: 'html-loader'}
         ]
     },
     plugins: [
-	     new HtmlWebpackPlugin({template: __dirname + "/app/index.tmpl.html"}),
+	     new HtmlWebpackPlugin({template: __dirname + "/app/index.html"}),
        new webpack.HotModuleReplacementPlugin()
     ],
     devServer: {
